@@ -1,0 +1,11 @@
+# Node Modules
+node_modules
+
+# NPM Logs
+npm-debug.log
+
+# Config.js
+./server/config/config.js
+
+# Ignore DS Store
+.DS_store

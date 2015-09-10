@@ -1,0 +1,50 @@
+{
+  "name": "devMagCommentSystem",
+  "version": "1.0.0",
+  "description": "A simple Comment System",
+  "main": "index.js",
+  "scripts": {
+    "start": "node ./bin/www"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/prank7/devComm.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/prank7/devComm/issues"
+  },
+  "homepage": "https://github.com/prank7/devComm#readme",
+  "dependencies": {
+    "body-parser": "~1.13.2",
+    "connect-redis": "^2.4.1",
+    "cookie-parser": "~1.3.5",
+    "cors": "^2.7.1",
+    "debug": "~2.2.0",
+    "express": "~4.13.1",
+    "flux": "^2.0.3",
+    "jade": "~1.11.0",
+    "jquery": "^2.1.4",
+    "lodash": "^3.10.1",
+    "mongoose": "^4.1.6",
+    "morgan": "~1.6.1",
+    "passport": "^0.2.2",
+    "passport-google-oauth": "^0.2.0",
+    "promise": "^7.0.4",
+    "react": "^0.13.3",
+    "serve-favicon": "~2.3.0",
+    "superagent": "^1.2.0",
+    "toastr": "^2.1.2"
+  },
+  "devDependencies": {
+    "css-loader": "^0.15.6",
+    "jsx-loader": "^0.13.2",
+    "node-sass": "^3.2.0",
+    "react-hot-loader": "^1.2.8",
+    "sass-loader": "^1.0.4",
+    "style-loader": "^0.12.3",
+    "webpack": "^1.10.1",
+    "webpack-dev-server": "^1.10.1"
+  }
+}

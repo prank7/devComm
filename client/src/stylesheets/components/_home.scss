@@ -1,0 +1,125 @@
+.row {
+  @include row();
+}
+
+.home {
+// styles for navbar
+  navbar {
+    @include span-columns(12);
+    background-color: #E84E0C;
+    height: 4.1em;
+
+    nav {
+      margin-top: 0.6em;
+      @include shift(2);
+      @include span-columns(4);
+      font-size: 1.7em;
+      color: white;
+    }
+
+    .nav-right {
+      float: right;
+      color: white;
+      display: inline-block;
+
+      span {
+        margin-top: -1.5em;
+        display: inline-block;
+        padding-right: 0.3em;
+        vertical-align: middle;
+      }
+    }
+  }
+
+// styles for Comment Box
+  .comment-box-container{
+    margin-top: 0em;
+
+    .outer-container {
+      @include outer-container;
+      
+      padding: 2em;
+
+      // styles for add box
+      .add-comment-box-container{
+        @include shift(1);
+        @include span-columns(10);
+        display: block;
+
+        h3{
+          font-size: 1.5em;
+          color: #FF7D00;
+        }
+
+        .comment-input-author {
+          padding: 0.2em;
+          border-radius: 0.3em;
+          border-color: none;
+          background-color: #FFDA97;
+          @include span-columns(5);
+          margin-bottom: 0.5em;
+        }
+        .comment-input-body {
+          padding: 1em 0.2em;
+          border-radius: 0.3em;
+          border-color: none;
+          background-color: #FFDA97;
+          @include span-columns(12);
+        }
+      }
+
+      // style for comment list
+      .comment-list-container {
+        @include shift(1);
+        @include span-columns(10);
+        margin-top: 1em;
+
+        .comment-list {
+          margin-top: 1em;
+
+          h4{
+            color: #FF7D00;
+            font-size: 1.5em;
+          }
+
+          ul {
+            li{
+              @include span-columns(12);
+              background-color: #FFA219;
+              padding: 0.2em 1em;
+              margin: 0.2em;
+              font-weight: bold;
+              border-radius: 0.4em;
+              color: white;
+
+              .author {
+                color: black;
+              }
+
+              .pull-right { 
+                float: right;
+              }
+
+              .pull-right:after {
+                @include span-columns(1);
+                font-weight: bold;
+                content: 'X'; 
+                color: #E83C50;
+                text-align: right;
+              }
+
+              .comment-body{
+                font-size: 1.2em;
+              }
+            }  
+          }
+        }
+      }
+    }
+  }
+}
+
+
+
+
+
