@@ -9,19 +9,17 @@ module.exports = function(app) {
   // Add common middleware here
   middleware(app);
 
-  // Setup the Database Connection
-  mongoose.createConnection('mongodb://localhost/commentSystem', function(err) {
-    if(err) {
-      console.log('connection error', err);
-    } else {
-      console.log('connection successful');
-    }
+  // Database Setup
+  mongoose.connect('mongodb://localhost/devComm');
+  var db = mongoose.connection;
+  db.on('error', console.error.bind(console, 'mongo connection error:'));
+  db.once('open', function callback () {
+    console.log('connected to mongo');
   });
 
   // All routes
   app.use('/', index);
   app.use('/api/comments/', apiComment);
-  
 
   // catch 404 and forward to error handler
   app.use(function(req, res, next) {
